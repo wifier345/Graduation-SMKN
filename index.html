@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cek pengumuman kelulusan menggunakan NISN" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Cek Kelulusan — SMA Negeri 1 Contoh</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- School photo background (16:9) -->
+  <div class="bg-photo" aria-hidden="true"></div>
+  <div class="bg-overlay" aria-hidden="true"></div>
+
+  <main class="card" role="main" aria-label="Form Cek Kelulusan">
+
+    <!-- School Branding -->
+    <div class="school-header">
+      <!--
+        School Logo PNG (308x261):
+        Replace the src below with: ./assets/logo.png
+        The onerror fallback shows an emoji if image is missing.
+      -->
+      <div class="school-logo-wrap">
+        <img
+          class="school-logo-img"
+          src="./assets/logo.png"
+          alt="Logo Sekolah"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="school-logo-fallback" style="display:none;">🎓</div>
+      </div>
+
+      <h1 class="school-name">SMA Negeri 1 Contoh</h1>
+      <p class="school-subtitle">Kabupaten Contoh &mdash; Tahun Ajaran 2024/2025</p>
+      <div class="divider-line"><div class="divider-dot"></div></div>
+      <p class="page-title">Pengumuman Kelulusan</p>
+    </div>
+
+    <!-- Countdown Timer -->
+    <div class="countdown-section" id="countdown-section">
+      <p class="countdown-label">Pengumuman dibuka dalam</p>
+
+      <div class="countdown-grid" aria-live="polite" aria-label="Hitung mundur pengumuman">
+        <div class="countdown-unit">
+          <div class="countdown-box" id="cd-days">00</div>
+          <div class="countdown-name">Hari</div>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit">
+          <div class="countdown-box" id="cd-hours">00</div>
+          <div class="countdown-name">Jam</div>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit">
+          <div class="countdown-box" id="cd-minutes">00</div>
+          <div class="countdown-name">Menit</div>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit">
+          <div class="countdown-box" id="cd-seconds">00</div>
+          <div class="countdown-name">Detik</div>
+        </div>
+      </div>
+
+      <p class="countdown-status" id="countdown-status">Harap tunggu hingga waktu pengumuman tiba</p>
+    </div>
+
+    <!-- NISN Form (locked until countdown ends) -->
+    <div class="form-section locked" id="form-section">
+      <form id="check-form" novalidate>
+        <div class="form-group">
+          <label for="nisn-input">Nomor Induk Siswa Nasional (NISN)</label>
+          <input
+            type="text"
+            id="nisn-input"
+            name="nisn"
+            inputmode="numeric"
+            maxlength="10"
+            placeholder="Masukkan 10 digit NISN"
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+            aria-describedby="error-msg input-hint"
+            required
+          />
+          <p class="input-hint" id="input-hint">Contoh: 0012345678</p>
+          <p class="error-msg" id="error-msg" role="alert" aria-live="assertive"></p>
+        </div>
+
+        <button type="submit" class="btn-primary" id="submit-btn" disabled>
+          <span id="btn-text">Cek Kelulusan</span>
+        </button>
+      </form>
+    </div>
+
+    <div class="card-footer">
+      Sistem pengumuman kelulusan resmi.<br>
+      Data bersifat rahasia dan hanya dapat diakses oleh siswa bersangkutan.
+    </div>
+
+  </main>
+
+  <script src="./assets/script.js"></script>
+</body>
+</html>
