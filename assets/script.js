@@ -18,7 +18,7 @@ const CONFIG = {
    * To test the countdown RIGHT NOW, set a time a few minutes in the future.
    * To test with form ALREADY UNLOCKED, set a past date.
    */
-  UNLOCK_DATE: '2026-04-20T23:00:00',
+  UNLOCK_DATE: '2026-04-19T23:27:00',
 
   /*
    * Student photo folder path.
